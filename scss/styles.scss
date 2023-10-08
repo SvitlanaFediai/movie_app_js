@@ -1,0 +1,21 @@
+// Base
+@import "./base/variables";
+@import "./base/mixins";
+@import "./base/reset";
+
+// Layout
+@import "./layout/general";
+@import "./layout/header";
+@import "./layout/footer";
+
+// Page styles
+@import "./modules/search";
+@import "./modules/preloader";
+@import "./modules/pagination";
+@import "./modules/btn";
+@import "./modules/nav";
+@import "./modules/slider";
+@import "./modules/filter";
+@import "./modules/movie";
+@import "./modules/card";
+@import "./modules/modal";

@@ -1,0 +1,43 @@
+.movie {
+  &__card {
+    width: 205px;
+    height: 365px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.76);
+    position: relative;
+    cursor: pointer;
+    border-radius: 1rem;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      scale: 1.05;
+    }
+    
+  }
+
+  &__banner {
+    width: 205px;
+    height: 288px;
+  }
+
+  &__name{
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-block: 8px 4px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__image {
+    border-radius: 1rem;
+  }
+
+  &--icon {
+    color: #f1f510,;
+  }
+}

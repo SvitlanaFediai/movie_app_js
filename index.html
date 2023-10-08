@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="Starter">
+	<meta name="author" content="Svitlana Fediai">
+	<title>Movies app</title>
+
+	<link rel="icon" href="./img/favicon.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+	<div class="menu">
+		<div class="container">
+			<nav class="navigation">
+				<a href="#" class="link">
+					<div class="logo">
+						<img src="./img/svg/logo.svg" alt="logo">
+						<h2 class="logo__title">Movie</h2>
+					</div>
+				</a>
+				<form action="" id="searchForm">
+					<input type="text" placeholder="search movie" id="search">
+					<button class="btn--icon" type="button">
+						<i class="fa-solid fa-magnifying-glass search__icon"></i>
+					</button>
+					<button type="button" class="btn btn--search">Search</button>
+					<i class="fa-solid fa-xmark close__icon"></i>
+				</form>
+			</nav>
+		</div>
+	</div>
+	<header>
+		<div class="slider-container">
+			<button class="arrow left-arrow" id="left">
+				<i class="fas fa-arrow-left"></i>
+			</button>
+			<button class="arrow right-arrow" id="right">
+				<i class="fas fa-arrow-right"></i>
+			</button>
+		</div>
+	</header>
+	<div class="container">
+		<section class="filter">
+			<div class="filter__dropdown">
+				<select name="genre" id="genre">
+					<option value="none" selected disabled hidden>All genre</option>
+				</select>
+
+				<select name="year" id="year">
+					<option value="none" selected disabled hidden>All years</option>
+				</select>
+				<button type="button" class="btn btn--filter">Search</button>
+			</div>
+			<h2 class="filter__title title"></h2>
+			<div class="filter__movie-list"></div>
+		</section>
+		<section class="filter-movie">
+			<div class="filter__container">
+				<h2 class="title movie__title">Get Movies</h2>
+				<div class="filter__buttons">
+					<button type="button" class="btn button btn--upcoming">Upcoming</button>
+					<button type="button" class="btn button btn--popular">Popular</button>
+					<button type="button" class="btn button btn--top">Top Rated</button>
+				</div>
+			</div>
+			<div class="filter__result"></div>
+			<div class="pagination">
+				<div class="page" id="prev">Previous Page</div>
+				<div class="current" id="current">1</div>
+				<div class="page" id="next">Next Page</div>
+			</div>
+		</section>
+	</div>
+	<button class="btn btn--back-to-top" type="button"></button>
+	<div class="modal__container"></div>
+	
+	<footer>
+		<div class="container">
+			<div class="footer__container">
+				<a href="#" class="link">
+					<div class="logo">
+						<img src="./img/svg/logo.svg" alt="logo">
+						<h2 class="logo__title">Movie</h2>
+					</div>
+				</a>
+				<div class="social">
+					<p class="footer__text">Movies, movie database, HTML, CSS, JS</p>
+					<div class="social__contact">
+						<a class="social__link link" href="https://www.instagram.com/svitlanka_fd/">
+							<svg class="social__icon icon">
+								<use xlink:href="./img/sprite.svg#instagram"></use>
+							</svg>
+						</a>
+						<a class="social__link link" href="https://www.linkedin.com/in/svitlana-fediai-a95061210/">
+							<svg class="social__icon icon">
+								<use xlink:href="./img/sprite.svg#linkedin"></use>
+							</svg>
+						</a>
+						<a class="social__link link" href="https://github.com/SvitlanaFediai">
+							<svg class="social__icon icon">
+								<use xlink:href="./img/sprite.svg#github"></use>
+							</svg>
+						</a>
+						<a class="social__link link" href="https://web.telegram.org/">
+							<svg class="social__icon icon">
+								<use xlink:href="./img/sprite.svg#telegram"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+			<p class="footer__year">&copy; copyright <span id="currentYear"></span></p>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="./js/main.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,34 @@
+.filter {
+  &__container {
+    padding: 20px 30px;
+    background: hsla(218, 39%, 14%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (min-width: $mobile) and (max-width: $tablet-start) {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+  
+
+  &__buttons {
+    background: $bg;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: flex;
+  }
+
+  &__result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    clear: both;
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}

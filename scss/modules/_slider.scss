@@ -1,0 +1,139 @@
+.slider-container {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.16) 0 6px 10px rgba(0, 0, 0, 0.23);
+  height: 70vh;
+  width: 70vw;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.slide {
+  opacity: 0;
+  transform: translateX(-25%);
+  height: 100vh;
+  width: 100vw;
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  top: -15vh;
+  left: -15vw;
+  z-index: 1;
+  transition: all 1s ease-in;
+
+  @media screen and (min-width: $mobile) and (max-width: 600px) {
+    top: 2vh;
+  }
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(-0%);
+}
+
+.arrow {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.23);
+  color: #fff;
+  padding: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 5;
+  border: none;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.arrow i {
+  font-size: 1.5rem;
+}
+
+.left-arrow {
+  left: 0;
+}
+
+.right-arrow {
+  right: 0;
+}
+
+.slider {
+  &__content {
+    opacity: 0;
+    position: relative;
+    top: 69%;
+    left: 65%;
+    transform: translate(-0%, -50%);
+    padding: 3rem;
+    background-color: rgba(0, 0, 0, 0.23);
+    transition: all .7s ease-in;
+
+    @media screen and (min-width: $mobile) and (max-width: $tablet-start) {
+      top: 60%;
+    }
+
+    &.active {
+      transform: translate(-50%, -59%);
+      opacity: 1;
+    }
+  }
+}
+
+.movie {
+  &__title {
+    color: #fff;
+    font-size: 3rem;
+
+    @media screen and (min-width: $mobile) and (max-width: $tablet-start) {
+      font-size: 2rem;
+    }
+  }
+
+  &__desc {
+    color: #fff;
+    padding: 1rem;
+    width: 50%;
+    overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 5;
+           line-clamp: 5;
+   -webkit-box-orient: vertical;
+
+    @media screen and (min-width: $mobile) and (max-width: $tablet-start) {
+      display: none;
+    }
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    gap: .7rem;
+
+    @media screen and (min-width: $mobile) and (max-width: $tablet-start) {
+      width: 50%;
+    }
+  }
+
+  &__category {
+    color: #fff;
+    background: $orange;
+    padding: 0.5rem 0.75rem;
+    border-radius: 20px;
+  }
+
+  &__year {
+    color: #fff;
+    background-color: #28b463;
+    padding: 0.5rem;
+    border-radius: 20px;
+
+    @media screen and (min-width: $mobile) and (max-width: $tablet-start) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 1rem 0;
+  
+
+  &.sticky {
+    background-color: rgba( 0, 0, 0, 0.30);
+  }
+}
+
+.navigation {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  color: $white;
+
+  @media screen and (min-width: $mobile) and (max-width: 600px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__title {
+    margin-left: .3rem;
+    font-size: 3rem;
+    font-family: $txt;
+    color: $white;
+  }
+
+  & img {
+    width: 50px;
+    background: $red;
+    border-radius: 5px;
+  }
+}
+
+#searchForm {
+  position: relative;
+  max-width: 60px;
+  height: 55px;
+  transition: all .6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  &.open {
+    max-width: 350px;
+
+    & input {
+      padding: 0 60px 0 80px;
+    }
+
+    & .close__icon {
+      transform: translateY(-50%) rotate(180deg);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    & .search__icon {
+      transform: rotate(0deg);
+    }
+
+    & .btn--search {
+      z-index: 1;
+      transition: all .6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+  }
+}
+
+#search {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  /*padding: 0 15px 0 65px;*/
+  padding: 0 15px;
+  font-family: inherit;
+  background-color: $white;
+  transition: all .6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  &:hover {
+    box-shadow: 0 0 0 2px hsla(250, 1%, 44%, 1);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px hsla(250, 100%, 95%, 1);
+  }
+}
+
+.search__icon {
+  font-size: 30px;
+  width: 60px;
+  color: #fff;
+  transform: rotate(90deg);
+  transition: all .6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  cursor: pointer;
+}
+
+.close__icon {
+  position: absolute;
+  right: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: #fff;
+  padding: 5px;
+  transition: all .6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  opacity: 0;
+  pointer-events: none;
+}

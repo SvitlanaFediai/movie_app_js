@@ -1,0 +1,24 @@
+.search {
+    margin-top: 25px;
+
+    &__field {
+        border-bottom: 2px solid #111;
+        background: none;
+        font: 300 14px $font;
+        padding: 5px 10px;
+        color: #111;
+        margin-right: 10px;
+    }
+
+    &__btn {
+        font: 500 16px $font;
+        text-transform: uppercase;
+        background: none;
+        cursor: pointer;
+        color: #111;
+
+        &:hover {
+            color: $red;
+        }
+    }
+}
